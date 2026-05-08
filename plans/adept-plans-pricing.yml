@@ -5,38 +5,71 @@ provider: Adept
 providerId: adept
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - AI
 - Agents
 - Foundation Models
 - Action Models
-- Workflow Automation
+- Open Source
 - Plans
-description: Placeholder plans/pricing artifact for Adept. Replace with real published pricing once
-  the pipeline researches the provider's plans page.
-notes: Initial scaffold — plans/pricing have not yet been reconciled against the provider's documentation.
+description: >-
+  Adept does not publish a commercial pricing surface. After the mid-2024
+  Amazon AGI talent move and IP licensing, Adept's only public artifacts
+  are open-source models on Hugging Face (Fuyu-8B, Persimmon-8B base /
+  chat) and historical research blog posts. The open-source models are
+  free to download under their model-card licenses; users self-host on
+  their own infrastructure.
+notes: >-
+  No managed API or hosted offering. There is no Adept rate card to
+  reconcile against.
 sources:
 - https://www.adept.ai/
+- https://huggingface.co/adept
 plans:
-- id: adept-default
-  name: To Be Reconciled
-  type: enterprise
-  description: Initial scaffold; replace with provider plan tiers (Free / Pro / Enterprise / pay-as-you-go,
-    etc.) once pricing is reconciled.
+- id: adept-open-source
+  name: Open-Source Models (Self-Hosted)
+  type: free
+  description: >-
+    Free download of Adept's open-source models from Hugging Face. Users
+    self-host the inference cost on their own hardware or a third-party
+    inference provider.
   entries:
-  - label: API Access
-    name: api_access
+  - label: Model Download
+    name: model_download
     type: flat
-    metric: varies
+    metric: download
     limit: -1
     timeFrame: usage
     geo: global
     unit: 1
-    price: see https://www.adept.ai/
+    price: $0 (subject to each model's license)
     userMultiplied: false
   elements:
-  - name: Pending Reconciliation
+  - name: Fuyu-8B
+  - name: Persimmon-8B Base
+  - name: Persimmon-8B Chat
+- id: adept-commercial
+  name: Commercial / Hosted API
+  type: enterprise
+  description: >-
+    Adept does not currently offer a commercial hosted API. Customers
+    interested in similar agent capabilities are typically directed to
+    Amazon (post-2024 talent and licensing arrangement) or to other
+    action-model providers.
+  entries:
+  - label: Commercial API
+    name: commercial_api
+    type: flat
+    metric: not_offered
+    limit: 0
+    timeFrame: usage
+    geo: global
+    unit: 1
+    price: not offered
+    userMultiplied: false
+  elements:
+  - name: Not Offered
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

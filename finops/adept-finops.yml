@@ -5,21 +5,30 @@ provider: Adept
 providerId: adept
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - AI
 - Agents
 - Foundation Models
 - Action Models
-- Workflow Automation
+- Open Source
 - FinOps
 - Cost Management
 - FOCUS
-description: FOCUS-aligned FinOps placeholder for Adept. Pipeline will replace with the provider's
-  real billing-model details once researched.
-notes: Initial scaffold — billing model has not yet been reconciled.
+description: >-
+  FinOps view of Adept "spend." Adept does not invoice customers - it has
+  no commercial API. The only direct cost surface is downloading the open-
+  source Fuyu-8B and Persimmon-8B models from Hugging Face (free) and the
+  customer's own self-hosted GPU inference cost (or third-party inference
+  provider cost). Those costs appear under the inference provider's
+  ServiceName, not Adept's.
+notes: >-
+  In a corporate FOCUS dataset there is typically no Adept-issued invoice
+  line item. Track the Adept models via tagging on the inference provider's
+  spend (e.g., AWS / Together / Fireworks running Fuyu-8B).
 sources:
 - https://www.adept.ai/
+- https://huggingface.co/adept
 - https://focus.finops.org/focus-specification/v1-3/
 alignedWith:
   framework: FinOps Foundation Framework
@@ -28,40 +37,47 @@ alignedWith:
   dataSpecVersion: '1.3'
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
 publisherName: Adept
-serviceCategory: AI
+serviceCategory: AI and Machine Learning
 billingModel:
-  pricingCategory: To Be Reconciled
-  billingFrequency: Monthly
+  pricingCategory: Other
+  billingFrequency: One-Time
   billingCurrency: USD
   chargeCategories:
-  - Usage
-  - Purchase
   - Adjustment
 focusColumns:
-  ServiceName: Adept
-  ServiceCategory: AI
+  ServiceName: Adept Open-Source Models
+  ServiceCategory: AI and Machine Learning
   ProviderName: Adept
   PublisherName: Adept
-  InvoiceIssuerName: Adept
+  InvoiceIssuerName: Not Applicable
   BillingCurrency: USD
-  ChargeCategory: Usage
+  ChargeCategory: Adjustment
+  PricingCategory: Other
 meters:
-- name: api_usage
-  description: Catch-all meter pending reconciliation against the provider's published metering.
-  unit: varies
+- name: model_downloads
+  description: Adept open-source model downloads (free) used for cost-free attribution / inventory tracking only.
+  unit: downloads
   aggregation: sum
   dimensions:
-  - account
-  - resource
+  - team
+  - model
+- name: self_hosted_inference_cost
+  description: Customer's own GPU inference cost when serving Adept open-source models (recorded under the inference provider, not Adept).
+  unit: usd
+  aggregation: sum
+  dimensions:
+  - team
+  - model
+  - inference_provider
 principles:
 - name: Visibility
-  description: Pull provider invoices or usage exports until a self-serve usage feed is documented.
+  description: Inventory which teams downloaded Adept models; correlate with self-hosted GPU spend tagged to those models.
 - name: Allocation
-  description: Tag invoice line items to consuming business units in your FinOps store.
+  description: Tag GPU inference workloads with the model name (Fuyu-8B / Persimmon-8B) for chargeback.
 - name: Optimization
-  description: Levers depend on the provider's billing model; review at renewal once reconciled.
+  description: Quantize or distill Adept open-source models if hosting cost exceeds value; consider replacing with newer open-source action models.
 - name: Accountability
-  description: Assign a contract owner to review billing against negotiated terms.
+  description: No Adept invoice to reconcile; owners are the teams running self-hosted inference.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

@@ -3,7 +3,7 @@ url: https://raw.githubusercontent.com/api-evangelist/adept/refs/heads/main/apis
 name: Adept
 x-type: company
 description: >-
-  Adept is an AI research lab building action-taking foundation models that can use software tools and complete tasks across business applications. The Adept ACT family powers their agent platform.
+  Adept was an AI research lab building action-taking foundation models (the ACT family) that can use software tools and complete tasks across business applications. In mid-2024, several Adept co-founders and senior researchers joined Amazon's AGI organization in a non-acquisition arrangement, and Amazon licensed Adept's technology. Adept the entity continues to exist, but it has no current public commercial API; its primary remaining footprint is open-source models published on Hugging Face (Fuyu-8B, Persimmon-8B) and historical research outputs (ACT-1, ACT-2).
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - AI
@@ -11,13 +11,90 @@ tags:
   - Foundation Models
   - Action Models
   - Workflow Automation
+  - Multimodal
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
-apis: []
+apis:
+  - aid: adept:adept-fuyu-8b-model
+    name: Adept Fuyu-8B Model
+    tags:
+      - Open Source
+      - Multimodal
+      - Vision
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://huggingface.co/adept/fuyu-8b
+    baseURL: https://huggingface.co/adept/fuyu-8b
+    properties:
+      - url: https://huggingface.co/adept/fuyu-8b
+        type: ModelCard
+      - url: https://www.adept.ai/blog/fuyu-8b
+        type: Documentation
+    description: >-
+      Open-source 9B-parameter image-text-to-text multimodal model designed for digital agents - simple architecture, arbitrary image resolutions, and strong UI/document understanding. Self-hosted only - no managed API.
+  - aid: adept:adept-persimmon-8b-base-model
+    name: Adept Persimmon-8B Base Model
+    tags:
+      - Open Source
+      - Text Generation
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://huggingface.co/adept/persimmon-8b-base
+    baseURL: https://huggingface.co/adept/persimmon-8b-base
+    properties:
+      - url: https://huggingface.co/adept/persimmon-8b-base
+        type: ModelCard
+      - url: https://www.adept.ai/blog/persimmon-8b
+        type: Documentation
+    description: >-
+      Open-source 8B-parameter base text generation model with permissive license. Self-hosted only - no managed API.
+  - aid: adept:adept-persimmon-8b-chat-model
+    name: Adept Persimmon-8B Chat Model
+    tags:
+      - Open Source
+      - Chat
+      - Text Generation
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://huggingface.co/adept/persimmon-8b-chat
+    baseURL: https://huggingface.co/adept/persimmon-8b-chat
+    properties:
+      - url: https://huggingface.co/adept/persimmon-8b-chat
+        type: ModelCard
+    description: >-
+      Open-source chat-tuned variant of Persimmon-8B. Self-hosted only - no managed API.
+  - aid: adept:adept-act-research
+    name: Adept ACT Research
+    tags:
+      - Research
+      - Agents
+      - Action Models
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.adept.ai/blog/act-1
+    baseURL: https://www.adept.ai/
+    properties:
+      - url: https://www.adept.ai/blog/act-1
+        type: Documentation
+      - url: https://www.adept.ai/blog/act-2
+        type: Documentation
+    description: >-
+      Research outputs and demos for Adept's ACT-1 and ACT-2 action transformers - foundation models that take actions on software tools. No public commercial API was released.
+  - aid: adept:adept-website
+    name: Adept Website
+    tags:
+      - Website
+      - Research
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.adept.ai/
+    baseURL: https://www.adept.ai/
+    properties:
+      - url: https://www.adept.ai/
+        type: Website
+    description: >-
+      Adept's company and research blog site. After the 2024 Amazon AGI talent move and IP licensing arrangement, the site primarily serves as a historical research record.
 common:
   - type: Website
     url: https://www.adept.ai/
+  - type: HuggingFace
+    url: https://huggingface.co/adept
   - type: Plans
     url: plans/adept-plans-pricing.yml
   - type: RateLimits

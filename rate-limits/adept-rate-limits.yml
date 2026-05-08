@@ -5,32 +5,49 @@ provider: Adept
 providerId: adept
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - AI
 - Agents
 - Foundation Models
 - Action Models
-- Workflow Automation
+- Open Source
 - Rate Limiting
 - Quotas
 - Throttling
-description: Placeholder rate-limit artifact for Adept. Replace with real limits once the pipeline
-  researches the provider's rate-limit documentation.
-notes: Initial scaffold — limits have not yet been reconciled against the provider's documentation.
+description: >-
+  Adept does not operate a public commercial API and therefore does not
+  publish API-level rate limits. Practical rate limits for users of Adept's
+  open-source models (Fuyu-8B, Persimmon-8B) are determined by the
+  customer's own self-hosted inference stack or by their chosen third-party
+  inference provider, not by Adept.
+notes: >-
+  No commercial API exists to throttle. Hugging Face's normal download
+  rate limits apply when pulling model weights.
 sources:
 - https://www.adept.ai/
+- https://huggingface.co/adept
 responseCodes:
   throttled: 429
 limits:
-- name: Default
-  scope: account
-  metric: varies
-  limit: see provider documentation
-  notes: Pending reconciliation.
+- name: Commercial API
+  scope: not_applicable
+  metric: not_offered
+  limit: not offered
+  notes: Adept does not operate a commercial inference API to rate-limit.
+- name: Hugging Face Downloads
+  scope: huggingface_account
+  metric: downloads
+  limit: per Hugging Face Hub policy
+  notes: Standard Hugging Face anonymous / authenticated download limits apply when fetching weights.
+- name: Self-Hosted Inference
+  scope: deployment
+  metric: requests
+  limit: bounded by self-hosted GPU capacity
+  notes: Throughput is determined by the customer's chosen hardware.
 policies:
-- name: Backoff Strategy
-  description: Clients should implement exponential backoff with jitter and honor any Retry-After header.
+- name: Self-Host Capacity Planning
+  description: Size GPU deployments per Fuyu-8B / Persimmon-8B model footprint and expected concurrency.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
