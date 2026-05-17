@@ -1,7 +1,7 @@
 aid: adept
 url: https://raw.githubusercontent.com/api-evangelist/adept/refs/heads/main/apis.yml
 name: Adept
-x-type: company
+kind: company
 description: >-
   Adept was an AI research lab building action-taking foundation models (the ACT family) that can use software tools and complete tasks across business applications. In mid-2024, several Adept co-founders and senior researchers joined Amazon's AGI organization in a non-acquisition arrangement, and Amazon licensed Adept's technology. Adept the entity continues to exist, but it has no current public commercial API; its primary remaining footprint is open-source models published on Hugging Face (Fuyu-8B, Persimmon-8B) and historical research outputs (ACT-1, ACT-2).
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
