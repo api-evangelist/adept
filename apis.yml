@@ -4,7 +4,7 @@ name: Adept
 kind: company
 description: >-
   Adept was an AI research lab building action-taking foundation models (the ACT family) that can use software tools and complete tasks across business applications. In mid-2024, several Adept co-founders and senior researchers joined Amazon's AGI organization in a non-acquisition arrangement, and Amazon licensed Adept's technology. Adept the entity continues to exist, but it has no current public commercial API; its primary remaining footprint is open-source models published on Hugging Face (Fuyu-8B, Persimmon-8B) and historical research outputs (ACT-1, ACT-2).
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - AI
   - Agents
@@ -22,7 +22,7 @@ apis:
       - Open Source
       - Multimodal
       - Vision
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://huggingface.co/adept/fuyu-8b
     baseURL: https://huggingface.co/adept/fuyu-8b
     properties:
@@ -37,7 +37,7 @@ apis:
     tags:
       - Open Source
       - Text Generation
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://huggingface.co/adept/persimmon-8b-base
     baseURL: https://huggingface.co/adept/persimmon-8b-base
     properties:
@@ -53,7 +53,7 @@ apis:
       - Open Source
       - Chat
       - Text Generation
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://huggingface.co/adept/persimmon-8b-chat
     baseURL: https://huggingface.co/adept/persimmon-8b-chat
     properties:
@@ -67,7 +67,7 @@ apis:
       - Research
       - Agents
       - Action Models
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.adept.ai/blog/act-1
     baseURL: https://www.adept.ai/
     properties:
@@ -82,7 +82,7 @@ apis:
     tags:
       - Website
       - Research
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.adept.ai/
     baseURL: https://www.adept.ai/
     properties:
