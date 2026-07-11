@@ -91,6 +91,12 @@ apis:
     description: >-
       Adept's company and research blog site. After the 2024 Amazon AGI talent move and IP licensing arrangement, the site primarily serves as a historical research record.
 common:
+  - type: TrustCenter
+    url: security/adept-trust-center.yml
+  - type: DomainSecurity
+    url: security/adept-domain-security.yml
+  - url: https://www.adept.ai/blog/rss.xml
+    type: Blog
   - type: LinkedIn
     url: https://www.linkedin.com/company/adeptai
   - type: Website
