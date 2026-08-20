@@ -18,6 +18,13 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/adept.png
 tags:
+  - Artificial Intelligence
+  - Agents
+  - Foundation Models
+  - Action Models
+  - Workflow-Automation
+  - Multi-Modal
+tags_raw:
   - AI
   - Agents
   - Foundation Models
@@ -31,6 +38,10 @@ apis:
   - aid: adept:adept-fuyu-8b-model
     name: Adept Fuyu-8B Model
     tags:
+      - Open-Source
+      - Multi-Modal
+      - Vision
+    tags_raw:
       - Open Source
       - Multimodal
       - Vision
@@ -47,6 +58,9 @@ apis:
   - aid: adept:adept-persimmon-8b-base-model
     name: Adept Persimmon-8B Base Model
     tags:
+      - Open-Source
+      - Text Generation
+    tags_raw:
       - Open Source
       - Text Generation
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
@@ -62,6 +76,10 @@ apis:
   - aid: adept:adept-persimmon-8b-chat-model
     name: Adept Persimmon-8B Chat Model
     tags:
+      - Open-Source
+      - Chat
+      - Text Generation
+    tags_raw:
       - Open Source
       - Chat
       - Text Generation
