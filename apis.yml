@@ -4,6 +4,17 @@ name: Adept
 kind: company
 description: >-
   Adept was an AI research lab building action-taking foundation models (the ACT family) that can use software tools and complete tasks across business applications. In mid-2024, several Adept co-founders and senior researchers joined Amazon's AGI organization in a non-acquisition arrangement, and Amazon licensed Adept's technology. Adept the entity continues to exist, but it has no current public commercial API; its primary remaining footprint is open-source models published on Hugging Face (Fuyu-8B, Persimmon-8B) and historical research outputs (ACT-1, ACT-2).
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
