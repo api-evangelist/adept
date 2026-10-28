@@ -1,4 +1,4 @@
-# Adept (adept)
+# Adept
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,51 +66,105 @@
 
 Adept was an AI research lab building action-taking foundation models (the ACT family) that can use software tools and complete tasks across business applications. In mid-2024, several Adept co-founders and senior researchers joined Amazon's AGI organization in a non-acquisition arrangement, and Amazon licensed Adept's technology. Adept the entity continues to exist, but it has no current public commercial API; its primary remaining footprint is open-source models published on Hugging Face (Fuyu-8B, Persimmon-8B) and historical research outputs (ACT-1, ACT-2).
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/adept/refs/heads/main/apis.yml)
+**Areas:** Artificial Intelligence · Agents · Foundation Models · Action Models · Workflow Automation · Multi-Modal
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=adept-api-evangelist&utm_content=repo)
+## Adept on APIs.io
 
-## Type
+Everything profiled for Adept is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/adept/](https://apis.io/providers/adept/)** — or go straight to one of the APIs or properties below.
 
-- **x-type:** company
+### APIs (5)
 
-## Tags:
+- [Adept Fuyu-8B Model](https://apis.io/apis/adept/adept-fuyu-8b-model/) — Open-source 9B-parameter image-text-to-text multimodal model designed for digital agents - simple architecture, arbitrary image resolutions, and strong…
+- [Adept Persimmon-8B Base Model](https://apis.io/apis/adept/adept-persimmon-8b-base-model/) — Open-source 8B-parameter base text generation model with permissive license. Self-hosted only - no managed API.
+- [Adept Persimmon-8B Chat Model](https://apis.io/apis/adept/adept-persimmon-8b-chat-model/) — Open-source chat-tuned variant of Persimmon-8B. Self-hosted only - no managed API.
+- [Adept ACT Research](https://apis.io/apis/adept/adept-act-research/) — Research outputs and demos for Adept's ACT-1 and ACT-2 action transformers - foundation models that take actions on software tools. No public commercial API…
+- [Adept Website](https://apis.io/apis/adept/adept-website/) — Adept's company and research blog site. After the 2024 Amazon AGI talent move and IP licensing arrangement, the site primarily serves as a historical…
 
- - AI, Agents, Foundation Models, Action Models, Workflow Automation, Multimodal
+### Published properties
 
-## Timestamps
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **Created:** 2026-05-08
-- **Modified:** 2026-05-08
+#### Security (2)
 
-## APIs
+Authentication, trust centre, and vulnerability disclosure.
 
-| API | Description |
-|---|---|
-| Adept Fuyu-8B Model | Open-source 9B image-text-to-text multimodal model (self-hosted). |
-| Adept Persimmon-8B Base Model | Open-source 8B base text generation model (self-hosted). |
-| Adept Persimmon-8B Chat Model | Open-source 8B chat-tuned variant (self-hosted). |
-| Adept ACT Research | Historical research outputs and demos for ACT-1 and ACT-2 (no public API). |
-| Adept Website | Company / research blog site. |
+- [Adept Domain Security](https://apis.io/security/adept/adept-domain-security/)
+- [Adept Trust Center](https://apis.io/security/adept/adept-trust-center/)
 
-## Common Properties
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Adept Plans Pricing](https://apis.io/plans/adept/adept-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Adept Rate Limits](https://apis.io/rate-limits/adept/adept-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Adept Finops](https://apis.io/finops/adept/adept-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.adept.ai/)
-- [Hugging Face](https://huggingface.co/adept)
-- [Plans](plans/adept-plans-pricing.yml) — API Commons Plans 0.1
-- [RateLimits](rate-limits/adept-rate-limits.yml) — API Commons Rate Limits 0.1
-- [FinOps](finops/adept-finops.yml) — FOCUS-aligned FinOps Framework 1.0
+- [Blog](https://www.adept.ai/blog/rss.xml)
 
-## Artifacts
+## API Evangelist rating
 
-| Artifact | Path | Notes |
-|---|---|---|
-| Plans | `plans/adept-plans-pricing.yml` | Open-source models (free) on HF; no commercial / hosted API. |
-| Rate Limits | `rate-limits/adept-rate-limits.yml` | No commercial API; HF download limits + self-hosted GPU capacity. |
-| FinOps | `finops/adept-finops.yml` | No Adept invoice surface; track via self-hosted inference provider spend. |
+**Kin Score 11.1** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## Maintainers
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 13.2 |
 
-**FN:** Kin Lane
+**Agent readiness 0.6** — human-only
 
-**Email:** kin@apievangelist.com
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.0** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/adept/](https://apis.io/providers/adept/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Adept: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/adept/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
